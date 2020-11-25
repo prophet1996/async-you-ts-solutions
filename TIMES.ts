@@ -4,7 +4,11 @@ import {request} from 'http';
 
 const hostname = process.argv[2];
 const port = process.argv[3];
-const makeHttpReq = (id: string, path: string, method: string, next: (arg0: Error, data: string | null) => void) => {
+const makeHttpReq = (
+    id: string,
+    path: string,
+    method: string,
+    next: (arg0: Error, data: string | null) => void) => {
     let data = '';
     const req = request({
         hostname,
